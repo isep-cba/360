@@ -13,7 +13,7 @@
     <!-- Image link template to be reused. -->
     <script id="link" type="text/html">
       <a-entity class="link"
-        geometry="primitive: plane; height: 1; width: 1"
+        geometry="primitive: plane; height: 1; width: 2"
         material="shader: flat; src: ${thumb}"
         event-set__mouseenter="scale: 1.2 1.2 1"
         event-set__mouseleave="scale: 1 1 1"
@@ -23,16 +23,16 @@
     </script>
     <link rel="stylesheet" href="estilos.css">
   </head>
+
   <body>
+
     <nav>
       <a href="index.html">Vialactea</a>
       <a href="galeria.html">Galeria</a>
       <a href="panal.html">Panal</a>
       <a href="iconos.html">Iconos</a>
       <a href="rio.html">Río</a>
-      
     </nav>
-
 
     <a-scene>
       <a-assets>
@@ -44,7 +44,6 @@
         <img id="galeria" crossorigin="anonymous" src="galeria1.jpg">
         <img id="galeria-thumb" crossorigin="anonymous" src="galeria1.jpg">
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-
       </a-assets>
 
       <!-- 360-degree image. -->
@@ -53,7 +52,7 @@
              animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      <a-entity id="links" layout="type: line; margin: 2.5" position="-3 0 -5">
         <a-entity template="src: #link" data-src="#panal" data-thumb="#panal-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#galaxia" data-thumb="#galaxia-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#galeria" data-thumb="#galeria-thumb"></a-entity>
