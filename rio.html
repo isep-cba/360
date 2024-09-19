@@ -4,9 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
-  
+    
 </head>
 <body>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    
+
   <nav>
     <a href="index.html">Vialactea</a>
     <a href="galeria.html">Galeria</a>
@@ -15,12 +18,18 @@
     <a href="rio.html">Río</a>
     
   </nav>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    
 <a-scene>
   <a-assets>
-    <img id="panorama" src="panal.jpg" crossorigin />
+    <img id="panorama" src="rio.jpeg" crossorigin />
+    <img id="panal" src="panal.jpg" crossorigin />
+
   </a-assets>
+
   <a-sky src="#panorama" rotation="0 -90 0"></a-sky>
+  <a-entity template="src: #link" data-thumb="#city-thumb"></a-entity>
+
+
 </a-scene>
 </body>
 </html>
